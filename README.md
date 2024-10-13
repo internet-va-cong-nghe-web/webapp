@@ -1,71 +1,74 @@
-# Getting Started with Create React App
+# Web Application for Reading Novels and Stories
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Group members :
 
-## Available Scripts
-![image](https://github.com/user-attachments/assets/25d1a294-db12-4f9e-8c09-21741c5643bd)
+| STT | MSSV     | Tên               | Phân công           |
+|-----|----------|-------------------|---------------------|
+| 1   | 21522196 | Nguyễn Tuấn Khang  |                     |
+| 2   | 22521029 | Trần Thiên Nhật    |                     |
+| 3   | 20520692 | Nguyễn Gia Phú     |                     |
+| 4   | 21522143 | Hứa Hồ Gia Huy     |                     |
+| 5   | 22520326 | Nguyễn Hà Anh Duy  |                     |
 
-In the project directory, you can run:
+## Introduction:
 
-### `npm start`
+Nowadays, the demand for reading novels and stories online is becoming increasingly popular, especially among young people who love the culture of reading. To meet this need, we have developed a web application for reading novels and stories, a convenient and user-friendly platform for searching, reading, and managing novels and stories from various genres.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Use case Diagram : 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://github.com/user-attachments/assets/dfc2f3a1-4554-4638-b906-d4ab1aa1893c)
 
-### `npm test`
+## Main Use Cases
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Guest Users:
+- **Search for Stories**:
+  - Guests can search for stories by keyword, genre, etc.
+  - Guests can view detailed information about a story, including description, reviews, and story progress. This includes:
+    - **View description**: Displays the story's summary.
+    - **View story reviews**: Displays ratings and comments from other readers.
+    - **View story progress**: Shows the story's status (completed or ongoing).
 
-### `npm run build`
+- **Read Some Free Stories**:
+  - Guests can read some chapters or free stories without registration.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Registered Users:
+- **Read Stories**:
+  - Users can read full chapters of stories, including both free and paid stories.
+  - The use case "Paid Story" is an extended case from "Read Stories", meaning that users will need to pay to access these chapters.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Add Stories to Favorites**:
+  - Registered users can mark stories they like to easily access them later.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Save Reading History**:
+  - The system will save the user's reading history so they can resume reading from where they left off.
 
-### `npm run eject`
+- **Comment and Review**:
+  - Registered users can leave comments and reviews about the stories they have read.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Manage Account**:
+  - Users can manage their personal information, including changing their username and password.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Payment**:
+  - If users want to read paid stories, they need to perform payment transactions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Administrator:
+- **Add/Delete Stories**:
+  - Administrators have the right to add new stories or delete stories from the system.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Edit Story Translations**:
+  - Administrators can edit the story translations (if applicable).
 
-## Learn More
+- **Hide/Show Comments**:
+  - Administrators can manage comments by hiding or showing users' comments.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Ban/Block Users**:
+  - Administrators have the authority to ban or block users' accounts if they violate system rules.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Manage Stories**:
+  - Administrators can perform management actions on the entire list of stories in the system.
 
-### Code Splitting
+- **Manage Comments**:
+  - Administrators can manage all comments, ensuring they comply with regulations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Manage Users**:
+  - Administrators manage all users in the system, including granting permissions, banning, or blocking accounts.
