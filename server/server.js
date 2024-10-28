@@ -10,11 +10,9 @@ const userRoutes = require('./routes/api/users');
 const authRoutes = require('./routes/api/auth');
 const {check, validationResult} = require('express-validator');
 const path = require("path");
+const {fileURLToPath} = require("url");
 // database connection
-mongoose.connect(mongoURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(mongoURL)
 .then(() => {
   console.log('Connected to MongoDB successfully');
 })
@@ -26,9 +24,13 @@ mongoose.connect(mongoURL, {
 app.use(express.json());
 app.use(cors());
 
+const __filename=fileURLtoPath(import.meta.url);
+const __dirname =path.dirname(__filename);
+
+//specify client app
 app.use(express.static(path.join(__dirname,'/client/build')));
 app.get('*',(req,res)=> {
-   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+   res.sendFile(path.join(__dirname, '/client/build/index.html'))
 });
 
 // routes
