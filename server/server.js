@@ -10,7 +10,7 @@ const userRoutes = require('./routes/api/users');
 const authRoutes = require('./routes/api/auth');
 const {check, validationResult} = require('express-validator');
 const path = require("path");
-const {fileURLToPath} = require("url");
+// const {fileURLToPath} = require("url");
 // database connection
 mongoose.connect(mongoURL)
 .then(() => {
@@ -24,8 +24,9 @@ mongoose.connect(mongoURL)
 app.use(express.json());
 app.use(cors());
 
-const __filename= fileURLToPath(import.meta.url);
-const __dirname =path.dirname(__filename);
+//nếu dùng ES module thì thêm : 
+// const __filename= fileURLToPath(import.meta.url);
+// const __dirname =path.dirname(__filename);
 
 //specify client app
 app.use(express.static(path.join(__dirname,'/client/build')));
