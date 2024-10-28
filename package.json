@@ -4,6 +4,7 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon server/server.js",
+    "server-prod":"set NODE_ENV=production&& nodemon server/server.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm install && npm install --prefix client  && npm run build --prefix client"
