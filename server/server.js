@@ -24,7 +24,7 @@ mongoose.connect(mongoURL)
 app.use(express.json());
 app.use(cors());
 
-const __filename=fileURLtoPath(import.meta.url);
+const __filename= fileURLToPath(import.meta.url);
 const __dirname =path.dirname(__filename);
 
 //specify client app
