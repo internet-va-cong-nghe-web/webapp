@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
+
+require('dotenv').config();
 const cors = require("cors");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const mongoose = require('mongoose');
-const config = require('config');
-const mongoURL = config.get('mongoURL'); 
+const mongoURL = process.env.mongoURL;
 // const mongoURL = "mongodb+srv://giahuy:user123@cluster0.zlwag.mongodb.net/novelweb_db";
 const userRoutes = require('./routes/api/users');
 const authRoutes = require('./routes/api/auth');

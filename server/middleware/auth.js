@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
-const config = require('config');
+
+require('dotenv').config();
 
 
 module.exports = function(req, res, next) {
@@ -13,7 +14,7 @@ module.exports = function(req, res, next) {
 
     // Verify (xác thực) token
     try {
-        const decoded = jwt.verify(token, config.get('jwtSecret'));
+        const decoded = jwt.verify(token, process.env.jwtSecret);
         // Gán giá trị đã giải mã (decoded) vào req.user để sử dụng trong route tiếp theo
         req.user = decoded.user;
         next(); // Chuyển sang phần tiếp theo của middleware
