@@ -2,6 +2,29 @@ const router = require("express").Router();
 const { User, validate } = require("../../models/User");
 const bcrypt = require('bcryptjs');
 
+router.get("/", async (req, res) => {
+    try {
+        const users = await User.find();
+        res.status(200).send(users);
+    } catch (error) {
+        console.error("Error retrieving users:", error);
+        res.status(500).send({ message: "Internal Server Error" });
+    }
+});
+
+router.get("/:id", async (req, res) => {
+    try {
+        const users = await User.findById(req.params.id);
+		if (!users) {
+            return res.status(404).send({ message: "User was not found" });
+        }
+        res.status(200).send(users);
+    } catch (error) {
+        console.error("Error retrieving user:", error);
+        res.status(500).send({ message: "Internal Server Error" });
+    }
+});
+
 router.post("/", async (req, res) => {
 	try {
 		const { error } = validate(req.body);
@@ -23,5 +46,34 @@ router.post("/", async (req, res) => {
 		res.status(500).send({ message: "Internal Server Error" });
 	}
 });
+
+router.put("/:id", async (req, res) => {
+    try {
+        const users = await User.findByIdAndUpdate(req.params.id, req.body, {new:true});
+		if (!users) {
+            return res.status(404).send({ message: "User was not found" });
+        }
+        res.status(200).send(users);
+    } catch (error) {
+        console.error("Error updating user:", error);
+        res.status(500).send({ message: "Internal Server Error" });
+    }
+});
+
+
+
+router.delete("/:id", async (req, res) => {
+    try {
+        const users = await User.findByIdAndDelete(req.params.id);
+		if (!users) {
+            return res.status(404).send({ message: "User was not found" });
+        }
+        res.status(200).send(`User is deleted. Goodbye ${users.name}!!`);
+    } catch (error) {
+        console.error("Error deleting user:", error);
+        res.status(500).send({ message: "Internal Server Error" });
+    }
+});
+
 
 module.exports = router;
