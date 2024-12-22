@@ -33,7 +33,7 @@ export const register = async (req, res) => {
     generateTokenAndSetCookie(user._id, res);
     return res.status(200).json({
       message: " Dang ky thanh cong ",
-      datas: user,
+      data: user,
     });
   } catch (error) {
     return res.status(500).json({
