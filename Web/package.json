@@ -36,7 +36,8 @@
         "styled-components": "^6.1.9",
         "swiper": "^11.1.1",
         "tippy.js": "^6.3.7",
-        "web-vitals": "^2.1.4"
+        "web-vitals": "^2.1.4",
+        "webphim": "file:"
     },
     "devDependencies": {
         "babel-plugin-module-resolver": "^5.0.2",
