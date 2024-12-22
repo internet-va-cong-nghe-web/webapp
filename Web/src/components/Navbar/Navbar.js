@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import logoImage from '../../assets/images/logo.png';
+import logoImage from '../../assets/images/logooo.png';
 import { FaSearch } from 'react-icons/fa';
 import '../../App.css';
 import '../../assets/css/style.css';
