@@ -15,11 +15,18 @@ app.use(cookieParser());
 const __dirname = path.dirname(fileURLToPath(import.meta.url) );
 app.use(express.static(path.join(__dirname, "static").replace("src", "")));
 
+app.get("/test", (req, res) =>{
+  res.send("hello TÔI LÀ HUY OK");
+})
+
 app.use("/api", router);
-mongoose.connect("mongodb+srv://giahuy:user123@cluster0.zlwag.mongodb.net/novelweb_db").then(() => {
+mongoose
+  .connect("mongodb+srv://giahuy:user123@cluster0.zlwag.mongodb.net/novelweb_db")
+  .then(() => {
   console.log("Connect to db success");
 });
 app.listen(8080, () => {
   console.log("Server is running 8080 port");
+  
 });
 //export const viteNodeApp = app;

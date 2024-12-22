@@ -1,7 +1,10 @@
-const router = require("express").Router();
-const Novel = require("../../models/Novel");
 
-router.post("/", async (req, res) => {
+import Novel from "../models/Novel.js";
+import express from "express";
+const routerNovel = express.Router();
+
+
+routerNovel.post("/", async (req, res) => {
     try {
         const { title, author, description, genre, rating, likes_count, comments } = req.body;
 
@@ -28,7 +31,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.get("/", async (req, res) => {
+routerNovel.get("/", async (req, res) => {
     try {
         const novels = await Novel.find();
         res.status(200).send(novels);
@@ -38,7 +41,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.get("/:id", async (req, res) => {
+routerNovel.get("/:id", async (req, res) => {
     try {
         const novel = await Novel.findById(req.params.id);
         if (!novel) {
@@ -52,7 +55,7 @@ router.get("/:id", async (req, res) => {
 });
 
 
-router.put("/:id", async (req, res) => {
+routerNovel.put("/:id", async (req, res) => {
     try {
         const updates = req.body;
         const novel = await Novel.findByIdAndUpdate(req.params.id, updates, { new: true });
@@ -67,7 +70,7 @@ router.put("/:id", async (req, res) => {
 });
 
 
-router.delete("/:id", async (req, res) => {
+routerNovel.delete("/:id", async (req, res) => {
     try {
         const novel = await Novel.findByIdAndDelete(req.params.id);
         if (!novel) {
@@ -80,4 +83,4 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
-module.exports = router;
+export default routerNovel;
