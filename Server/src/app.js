@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 // Lấy đường dẫn thư mục hiện tại
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url) );
 app.use(express.static(path.join(__dirname, "static").replace("src", "")));
 
 app.use("/api", router);
