@@ -9,7 +9,7 @@ function ListFavorite() {
     return (
         <ContainFavorite>
             <Navbar />
-            <MoviesRow movies={listFilms} title="Phim yêu thích" />
+            <MoviesRow movies={listFilms} title="Novel yêu thích" />
             <div className="space"></div>
             <Footer />
         </ContainFavorite>
