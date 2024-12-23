@@ -2,7 +2,7 @@ import ReactPlayer from 'react-player';
 import { VscMute, VscUnmute } from 'react-icons/vsc';
 import styled from 'styled-components';
 import { useState } from 'react';
-import videoDemo from '../../assets/images/demo2.jpg';
+import videoDemo from '../../assets/images/demo1.mp4';
 import { Link } from 'react-router-dom';
 function Intro() {
     const [isMuted, setIsMute] = useState(false);
