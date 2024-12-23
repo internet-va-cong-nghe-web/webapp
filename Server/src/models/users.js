@@ -24,7 +24,7 @@ const UserSchema = new mongoose.Schema(
     favorite: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Film",
+        ref: "Novel",
         required: true,
       },
     ],

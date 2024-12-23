@@ -27,6 +27,26 @@ import ResultFilm from './pages/film/resultFilm';
 import Profile from './pages/auth/profile';
 import ChangePass from './pages/auth/changePass';
 
+// import NovelInforPage from './pages/novel/getAllNovelsInfor';
+// import CreateNovelInfor from './pages/novel/createNovel';
+// import EditNovelPage from './pages/novel/editNovel';
+// import CreateEpisode from './pages/episode/createEpisode';
+// import DetailNovel from './pages/novel/detailNovels';
+// import WatchNovel from './pages/novel/watchingNovel';
+// import Register from './pages/auth/register';
+// import LoginPage from './pages/auth/login';
+// import ListFavorite from './pages/novel/listFavoriteNovel';
+// import { useContext } from 'react';
+// import { UserContext } from './context/authContext';
+// import useGetAccess from './hooks/auth/useGetAccess';
+// import HomePageAdmin from './pages/pageAdmin';
+// import DenyAccess from './components/access/403';
+// import FindNovelByGenre from './pages/novel/getNovelByGenre';
+// import ResultNovel from './pages/novel/resultNovel';
+// import Profile from './pages/auth/profile';
+// import ChangePass from './pages/auth/changePass';
+
+
 function App() {
     const { allowAccess } = useContext(UserContext);
     useGetAccess();
@@ -43,12 +63,10 @@ function App() {
             <Route path="/createGenre" element={<CreateGenre />} />
             <Route path="/updateGenre/:id" element={<UpdateGenre />} />
             <Route path="/deleteGenre/:id" element={<DeleteGenre />} />
-
-            <Route path="/favorite-film" element={<ListFavorite />} />
-
             <Route path="/profile" element={<Profile/>} />
             <Route path="/changePass" element={<ChangePass/>} />
 
+            <Route path="/favorite-film" element={<ListFavorite />} />
             <Route path="/filmsInfor/" element={<FilmInforPage />} />
             <Route path="/filmCreate/" element={<CreateFilmInfor />} />
             <Route path="/film/edit/:id" element={<EditFilmPage />} />
@@ -59,6 +77,20 @@ function App() {
             <Route path="/film/watch/:id" element={<WatchFilm />} />
             <Route path="/find-by-genre/:id" element={<FindFilmByGenre />} />
             <Route path="/search-film/:keyword" element={<ResultFilm />} />
+
+
+            {/* id cua novel
+            <Route path="/favorite-novel" element={<ListFavorite />} />
+            <Route path="/novelsInfor/" element={<NovelInforPage />} />
+            <Route path="/novelCreate/" element={<CreateNovelInfor />} />
+            <Route path="/novel/edit/:id" element={<EditNovelPage />} />
+            <Route path="/novel/delete/:id" element={<CreateNovelInfor />} />
+            
+            <Route path="/novel/createEpisode/:id" element={<CreateEpisode />} />
+            <Route path="/novel/detail/:id" element={<DetailNovel />} />
+            <Route path="/novel/watch/:id" element={<WatchNovel />} />
+            <Route path="/find-by-genre/:id" element={<FindNovelByGenre />} />
+            <Route path="/search-novel/:keyword" element={<ResultNovel />} /> */}
 
             {/* login */}
             <Route path="/register" element={user ? <HomePage /> : <Register />} />
