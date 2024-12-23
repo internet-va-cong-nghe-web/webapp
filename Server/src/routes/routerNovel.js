@@ -5,41 +5,39 @@ import {
   getDetail,
   update,
   remove,
-  getFilm,
-  followFilm,
-  getFollowFilmOfUser,
+  getNovel,
+  followNovel,
+  getFollowNovelOfUser,
   markEpisodeWatching,
-  getWatchingTime,
-  getFilmByGenres,
-  getFilmByGenresId,
-  searchFilm,
-  ratingFilm,
+  getNovelByGenres,
+  getNovelByGenresId,
+  searchNovel,
+  ratingNovel,
   getRateOfUser,
 } from "../controllers/NovelController.js";
 import upload from "../configs/multerConfig.js";
 import protectRoute from "../../until/decodeToken.js";
 import isAdmin from "../../until/checkIsAdmin.js";
 
-const routerFilm = express.Router();
+const routerNovel = express.Router();
 
-routerFilm.get("/", get);
-// routerFilm.post("/update/:id", protectRoute, isAdmin,upload.single("poster"), update);
-// routerFilm.delete("/:id", protectRoute, isAdmin, remove);
-// routerFilm.post("/create", protectRoute, isAdmin, upload.single("poster"), create);
+routerNovel.get("/", get);
+// routerNovel.post("/update/:id", protectRoute, isAdmin,upload.single("poster"), update);
+// routerNovel.delete("/:id", protectRoute, isAdmin, remove);
+// routerNovel.post("/create", protectRoute, isAdmin, upload.single("poster"), create);
 
-routerFilm.post("/update/:id",upload.single("poster"), update);
-routerFilm.delete("/:id", remove);
-routerFilm.post("/create", upload.single("poster"), create);
+routerNovel.post("/update/:id",upload.single("poster"), update);
+routerNovel.delete("/:id", remove);
+routerNovel.post("/create", upload.single("poster"), create);
 
-routerFilm.get("/get-detail/:id", getDetail);
-routerFilm.get("/get/:id", getFilm);
-routerFilm.post("/follow", protectRoute, followFilm);
-routerFilm.get("/list-favorite", protectRoute, getFollowFilmOfUser);
-routerFilm.post("/watching-history", protectRoute, markEpisodeWatching);
-routerFilm.post("/get-time", protectRoute, getWatchingTime);
-routerFilm.get("/findMovie/:id",  getFilmByGenres);
-routerFilm.post("/get-film-by-genre", getFilmByGenresId);
-routerFilm.post("/search-film",  searchFilm);
-routerFilm.post("/rating", protectRoute, ratingFilm);
-routerFilm.post("/getRate", protectRoute, getRateOfUser);
-export default routerFilm;
+routerNovel.get("/get-detail/:id", getDetail);
+routerNovel.get("/get/:id", getNovel);
+routerNovel.post("/follow", protectRoute, followNovel);
+routerNovel.get("/list-favorite", protectRoute, getFollowNovelOfUser);
+routerNovel.post("/watching-history", protectRoute, markEpisodeWatching);
+routerNovel.get("/findNovel/:id",  getNovelByGenres);
+routerNovel.post("/get-novel-by-genre", getNovelByGenresId);
+routerNovel.post("/search-novel",  searchNovel);
+routerNovel.post("/rating", protectRoute, ratingNovel);
+routerNovel.post("/getRate", protectRoute, getRateOfUser);
+export default routerNovel;
