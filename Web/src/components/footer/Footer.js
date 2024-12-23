@@ -18,24 +18,24 @@ function Footer({ className }) {
                         <li className={cs('item')}>
                             <a href="tel:phonenumber" className={cs('item-link')}>
                                 <FontAwesomeIcon className={cs('icon')} icon={faPhone} />
-                                Phone Number : 0337883917
+                                Phone Number : 0889539901889539901
                             </a>
                         </li>
 
                         <li className={cs('item')}>
                             <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" className={cs('item-link')}>
                                 <FontAwesomeIcon className={cs('icon')} icon={faEnvelope} />
-                                Email : thanhtam01224@gmail.com
+                                Email : 22520326@gm.uit.edu.vnvn
                             </a>
                         </li>
 
                         <li className={cs('item')}>
                             <a
-                                href="https://www.google.com/maps/search/100%2F8+Quang+Trung,+T%C4%83ng+Nh%C6%A1n+Ph%C3%BA+B,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh/@10.8608434,106.7824432,15z?entry=ttu"
+                                href="https://www.google.com/maps/search/K%C3%BD+t%C3%BAc+x%C3%A1+Khu+A+%C4%90H+Qu%E1%BB%91c+gia+TP.+H%E1%BB%93+Ch%C3%AD+Minh/@10.8787677,106.7840747,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
                                 className={cs('item-link')}
                             >
                                 <FontAwesomeIcon className={cs('icon')} icon={faHome} />
-                                Address : To Tang Nhon Phu B-Quan 9-Thu Duc
+                                Address : KTX Khu A DHQG TPHCM 
                             </a>
                         </li>
                     </ul>

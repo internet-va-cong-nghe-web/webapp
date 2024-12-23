@@ -24,9 +24,9 @@ function Intro() {
             />  
             </Link>
             <div className="infoIntro">
-                <h1 className="headingIntro">Annabelle</h1>
+                <h1 className="headingIntro">I Got Married to the Girl I Hate Most in Class </h1>
                 <p className="overviewIntro">
-                Spilled blood and terror are not all they leave behind.  The cultists have conjured an entity so malevolent that nothing they did will compare to the sinister conduit to the damned that is now...Annabelle.
+                What happens when you get hitched to your nemesis? One newlywed student couple must figure out how to live in harmony in this hilarious rom-com!
                 </p>
             </div>
             {isMuted ? (
