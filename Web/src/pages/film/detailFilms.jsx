@@ -229,7 +229,7 @@ function DetailFilm() {
                                         </div>
                                         <div className="anime__details__btn">
                                             <Link className="watch-btn" to={`/film/watch/${film?._id}`}>
-                                                Watch Now
+                                                Read Now
                                             </Link>
                                             <button onClick={handleFollow} className="follow-btn">
                                                 {isFollowed ? 'Unfollow' : 'Follow'}

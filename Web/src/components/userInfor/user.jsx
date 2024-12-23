@@ -47,7 +47,7 @@ function UserDrop() {
                     <div className="dropdownLogin-content">
                         <Link to={'/profile'}>Profile</Link>
                         <hr className='line'/>
-                        <Link to={'/favorite-film'}>Phim yêu thích</Link>
+                        <Link to={'/favorite-film'}>Novel yêu thích</Link>
                         <hr className='line'/>
                         {user.isAdmin && <Link to={'/admin'}>Admin Panel</Link>}
                         <hr className='line'/>
