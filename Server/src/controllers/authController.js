@@ -25,7 +25,7 @@ export const register = async (req, res) => {
 
     const user = await User.create({
       ...req.body,
-      avatar: "http://localhost:8081/upload/avatar/avatar.png",
+      avatar: "http://localhost:8090/upload/avatar/avatar.png",
       password: hashNewPassword,
     });
     user.password = undefined;
@@ -33,7 +33,7 @@ export const register = async (req, res) => {
     generateTokenAndSetCookie(user._id, res);
     return res.status(200).json({
       message: " Dang ky thanh cong ",
-      data: user,
+      datas: user,
     });
   } catch (error) {
     return res.status(500).json({

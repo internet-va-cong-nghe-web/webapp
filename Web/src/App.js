@@ -38,6 +38,7 @@ function App() {
 
             {/* <Route path="/admin" element={allowAccess === true ? <HomePageAdmin /> : <DenyAccess />} /> */}
             <Route path="/admin" element={allowAccess === true ? <HomePageAdmin /> : <DenyAccess />} />
+
             <Route path="/genres" element={<GenresPage />} />
             <Route path="/createGenre" element={<CreateGenre />} />
             <Route path="/updateGenre/:id" element={<UpdateGenre />} />
