@@ -41,9 +41,6 @@ const storySchema = new mongoose.Schema({
         totalChap: {
           type: Number,
         },
-        movieDuration: {
-          type: String,
-        },
         totalPoints: {
           type: Number,
           required: false,
