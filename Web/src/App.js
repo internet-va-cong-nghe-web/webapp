@@ -56,8 +56,9 @@ function App() {
         <Routes>
             <Route path="/" element={ <HomePage /> } />
 
-            {/* <Route path="/admin" element={allowAccess === true ? <HomePageAdmin /> : <DenyAccess />} /> */}
-            <Route path="/admin" element={allowAccess === true ? <HomePageAdmin /> : <DenyAccess />} />
+            {/* <Route path="/admin" element={a11llowAccess === true ? <HomePageAdmin /> : <DenyAccess />} /> */}
+            <Route path="/admin" element={<HomePageAdmin />} />
+
 
             <Route path="/genres" element={<GenresPage />} />
             <Route path="/createGenre" element={<CreateGenre />} />
@@ -71,7 +72,7 @@ function App() {
             <Route path="/filmCreate/" element={<CreateFilmInfor />} />
             <Route path="/film/edit/:id" element={<EditFilmPage />} />
             <Route path="/film/delete/:id" element={<CreateFilmInfor />} />
-            {/* id cua movie */}
+            
             <Route path="/film/createEpisode/:id" element={<CreateEpisode />} />
             <Route path="/film/detail/:id" element={<DetailFilm />} />
             <Route path="/film/watch/:id" element={<WatchFilm />} />

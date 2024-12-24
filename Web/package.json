@@ -1,5 +1,5 @@
 {
-    "name": "webphim",
+    "name": "webtieuthuyet",
     "version": "0.1.0",
     "private": true,
     "proxy": "http://localhost:8089",
@@ -38,7 +38,7 @@
         "swiper": "^11.1.1",
         "tippy.js": "^6.3.7",
         "web-vitals": "^2.1.4",
-        "webphim": "file:"
+        "webtieuthuyet": "file:"
     },
     "devDependencies": {
         "babel-plugin-module-resolver": "^5.0.2",
