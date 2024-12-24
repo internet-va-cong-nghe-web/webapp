@@ -97,20 +97,12 @@ function CreateNovelPage() {
                                         setNovelInfor({ ...novelInfor, country: e.target.value });
                                     }}
                                 />
-                                <label>Novel actor</label>
+
+                                <label>Novel author</label>
                                 <input
-                                    value={novelInfor.actors}
+                                    value={novelInfor.author}
                                     type="text"
-                                    name="actor"
-                                    onChange={(e) => {
-                                        setNovelInfor({ ...novelInfor, actors: [e.target.value] });
-                                    }}
-                                />
-                                <label>Novel director</label>
-                                <input
-                                    value={novelInfor.director}
-                                    type="text"
-                                    name="director"
+                                    name="author"
                                     onChange={(e) => {
                                         setNovelInfor({ ...novelInfor, director: e.target.value });
                                     }}
@@ -150,15 +142,6 @@ function CreateNovelPage() {
                                     name="totalChap"
                                     onChange={(e) => {
                                         setNovelInfor({ ...novelInfor, totalChap: e.target.value });
-                                    }}
-                                />
-                                <label>Novel storyDuration</label>
-                                <input
-                                    value={novelInfor.storyDuration}
-                                    type="text"
-                                    name="storyDuration"
-                                    onChange={(e) => {
-                                        setNovelInfor({ ...novelInfor, storyDuration: e.target.value });
                                     }}
                                 />
 

@@ -10,7 +10,7 @@ function Intro() {
 
     return (
         <IntroContainer>
-            <Link to={'/novel/detail/66751ee53863f604d8f21178'}>
+            {/* <Link to={'/novel/detail/66751ee53863f604d8f21178'}>
             <ReactPlayer
                 playing={true}
                 width="100%"
@@ -22,7 +22,7 @@ function Intro() {
                 className="videoIntro"
                 
             />  
-            </Link>
+            </Link> */}
             <div className="infoIntro">
                 <h1 className="headingIntro">I Got Married to the Girl I Hate Most in Class </h1>
                 <p className="overviewIntro">
