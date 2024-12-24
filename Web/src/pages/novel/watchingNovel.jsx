@@ -37,9 +37,13 @@ function WatchNovel() {
                                     
                                 </span>
                                 <span style={{ fontSize: '33px', paddingTop: '50px', color: '#fff' }}>
-                                    {novel?.country}
-                                    Chúc bạn luôn có năng lượng tích cực và năng động.
-                                    {novel?.descryption}
+                                    
+                                    <p><strong>Truyện : </strong></p>  {novel?.name}
+                                    <br />
+                                    <img src={novel?.poster_img} alt={novel?.name} style={{ width: '200px', borderRadius: '10px', marginBottom: '20px' }} />
+                                    <br />
+                                    <p><strong>Nội dung : </strong></p>
+                                    {novel?.description}
                                 </span>
                             </div>
                         </div>

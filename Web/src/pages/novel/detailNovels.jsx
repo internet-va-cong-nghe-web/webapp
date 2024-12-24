@@ -171,7 +171,7 @@ function DetailNovel() {
                                             </div>
                                             {/* <span>1.029 Votes</span> */}
                                         </div>
-                                        <p>{novel?.description}</p>
+                                        {/* <p>{novel?.description}</p> */}
                                         <div className="anime__details__widget">
                                             <div className="row-detail">
                                                 <div className="col-lg-6">
