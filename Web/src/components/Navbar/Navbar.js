@@ -7,12 +7,12 @@ import '../../assets/css/style.css';
 import { useScrollY } from '../hook';
 import { Link, useParams } from 'react-router-dom';
 import UserDrop from '../userInfor/user';
-import useSearchFilm from '~/hooks/film/useSeachFilm';
+import useSearchNovel from '~/hooks/novel/useSeachNovel';
 function Navbar() {
     const{id} = useParams();
     const [genresList, setGenresList] = useState([]);
     const [keyWord, setKeyWord] = useState('');
-    const { searchFilms, searchResult } = useSearchFilm();
+    const { searchNovels, searchResult } = useSearchNovel();
     
     useEffect(() => {
         const getGenreList = async () => {
@@ -30,8 +30,8 @@ function Navbar() {
     
 
     const handleSearch = async () => {
-        // await searchFilms(keyWord);
-        window.location.href = `/search-film/${keyWord}`;
+        // await searchNovels(keyWord);
+        window.location.href = `/search-novel/${keyWord}`;
     };
     const handleGenreClick = (genreId) => {
         window.location.href = `/find-by-genre/${genreId}`;

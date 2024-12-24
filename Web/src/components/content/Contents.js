@@ -1,20 +1,20 @@
 import React from 'react';
-import MoviesRow from './MoviesRow';
+import StorysRow from './StorysRow';
 import useGetGenres from '~/hooks/genre/useGetGenres';
-import useGetAllFilm from '~/hooks/film/useGetAllFilm';
+import useGetAllNovel from '~/hooks/novel/useGetAllNovel';
 
 function Content() {
     const { genreList } = useGetGenres();
-    const { filmList } = useGetAllFilm();
+    const { novelList } = useGetAllNovel();
 
-    const filterFilmByGenre = (genreId) => {
-        return filmList.filter((film) => film.genres.includes(genreId));
+    const filterNovelByGenre = (genreId) => {
+        return novelList.filter((novel) => novel.genres.includes(genreId));
     };
 
     return (
         <div>
             {genreList.map((genre) => (
-                <MoviesRow key={genre._id} movies={filterFilmByGenre(genre._id)} title={genre.name} />
+                <StorysRow key={genre._id} storys={filterNovelByGenre(genre._id)} title={genre.name} />
             ))}
 
         </div>

@@ -12,7 +12,7 @@ function CreateEpisode() {
     const { id } = useParams();
 
     const [episodeInfo, setEpisodeInfo] = useState({
-        movieId: id,
+        storyId: id,
         name_episode: '',
         episode_number: 1,
         videoUrl: 'no need!',

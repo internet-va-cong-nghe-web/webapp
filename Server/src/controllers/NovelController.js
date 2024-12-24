@@ -9,32 +9,40 @@ import { error } from "console";
 export const get = async (req, res) => {
   try {
     const novel = await Novel.find();
+    if (novelm.length === 0) {
+      return res.status(400).json({
+        message: " khong ton tai tieu thuyet nao!",
+      });
+    }
     return res.status(200).json({
-      message: " Tim thanh cong tieu thuyet",
+      message: " Tim thanh cong bo tieu thuyet",
       datas: novel,
     });
-  }  catch (err) {
-    // Handle errors
-    console.error(err);
-    res.status(500).json({ error: "Failed to fetch novels" });
+  } catch (error) {
+    return res.status(500).json({
+      message: "loi sever",
+    });
   }
 };
 
 export const getNovel = async (req, res) => {
   try {
-    const { id } = req.params;
-
-    // Fetch the novel by ID
-    const novel = await Novel.findById(id);
-
+    let novel = await Novel.findOne({ _id: req.params.id });
     if (!novel) {
-      return res.status(404).json({ error: "Novel not found" });
+      return res.status(400).json({
+        message: " khong ton tai bo tieu thuyet nao!",
+      });
     }
 
-    res.status(200).json(novel);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to fetch the novel" });
+    return res.status(200).json({
+      message: " Tim thanh cong bo tieu thuyet",
+      datas: novel,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      message: "loi sever",
+    });
   }
 };
 
@@ -57,7 +65,7 @@ export const getDetail = async (req, res) => {
     );
 
     return res.status(200).json({
-      message: " Tim thanh cong bo phim",
+      message: " Tim thanh cong bo tieu thuyet",
       datas: novel,
     });
   } catch (error) {
@@ -123,7 +131,7 @@ export const create = async (req, res) => {
 
     fs.unlinkSync(req.file.path);
     return res.status(200).json({
-      message: " Them thanh cong bo phim",
+      message: " Them thanh cong bo tieu thuyet",
       datas: novels,
     });
   } catch (error) {
@@ -176,7 +184,7 @@ export const update = async (req, res) => {
 
 
 
-    // Cập nhật tài liệu phim trong cơ sở dữ liệu
+    // Cập nhật tài liệu tieu thuyet trong cơ sở dữ liệu
     const updatedNovel = await Novel.findByIdAndUpdate(id, novelData, {
       new: true,
       runValidators: true,
@@ -189,11 +197,11 @@ export const update = async (req, res) => {
     }
 
     return res.status(200).json({
-      message: "Cập nhật thành công bộ phim",
+      message: "Cập nhật thành công bộ tieu thuyet",
       datas: updatedNovel,
     });
   } catch (error) {
-    console.error("Lỗi khi cập nhật phim:", error);
+    console.error("Lỗi khi cập nhật tieu thuyet:", error);
     return res.status(500).json({
       message: "Lỗi server",
     });
@@ -210,7 +218,7 @@ export const remove = async (req, res) => {
       });
     }
     return res.status(200).json({
-      message: " Xoa thanh cong bo phim",
+      message: " Xoa thanh cong bo tieu thuyet",
       datas: novels,
     });
   } catch (error) {
@@ -288,12 +296,12 @@ export const getNovelByGenres = async (req, res) => {
     if (novels.length === 0) {
       return res
         .status(400)
-        .json({ message: "Không tồn tại phim nào thuộc thể loại này" });
+        .json({ message: "Không tồn tại tieu thuyet nào thuộc thể loại này" });
     }
 
     return res
       .status(200)
-      .json({ message: "Tìm thành công phim", datas: novels });
+      .json({ message: "Tìm thành công tieu thuyet", datas: novels });
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ message: "Lỗi server" });

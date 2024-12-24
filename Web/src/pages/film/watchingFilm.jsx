@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import useGetEpisodeOfFilm from '~/hooks/episode/useGetEpisodeOfFilm';
+import useGetEpisodeOfFilm from '~/hooks/episode/useGetEpisodeOfNovel';
 import { useParams } from 'react-router-dom';
 import useGetFilm from '~/hooks/film/useGetFilm';
 import ReactPlayer from 'react-player';

@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-const useGetEpisodeOfFilm = (movieId) => {
+const useGetEpisodeOfNovel = (storyId) => {
     const [episodeList, setEpisodeList] = useState([]);
     const [currentEpisode, setCurrentEpisode] = useState(null);
 
     useEffect(() => {
         const getEpisodeInfor = async () => {
-            const response = await fetch(`/Api/api/episode/${movieId}`);
+            const response = await fetch(`/Api/api/episode/${storyId}`);
             const data = await response.json();
             if (response.ok) {
                 setEpisodeList(data.data);
@@ -21,4 +21,4 @@ const useGetEpisodeOfFilm = (movieId) => {
     return { episodeList, currentEpisode, setCurrentEpisode };
 };
 
-export default useGetEpisodeOfFilm;
+export default useGetEpisodeOfNovel;

@@ -62,7 +62,7 @@ function NavbarAdmin(props) {
                                         <Link to={'/genres'}>Genres management</Link>
                                     </li>
                                     <li className="active">
-                                        <Link to={'/filmsInfor'}>Novel management</Link>
+                                        <Link to={'/novelsInfor'}>Novel management</Link>
                                     </li>
                                 </ul>
                             </nav>

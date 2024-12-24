@@ -1,4 +1,4 @@
-import MoviesRow from '~/components/content/MoviesRow';
+import MoviesRow from '~/components/content/StorysRow';
 import Navbar from '~/components/Navbar/Navbar';
 import Footer from '~/components/footer/Footer';
 import styled from 'styled-components';

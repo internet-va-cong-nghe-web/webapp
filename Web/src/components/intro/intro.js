@@ -10,7 +10,7 @@ function Intro() {
 
     return (
         <IntroContainer>
-            <Link to={'/film/detail/66751ee53863f604d8f21178'}>
+            <Link to={'/novel/detail/66751ee53863f604d8f21178'}>
             <ReactPlayer
                 playing={true}
                 width="100%"

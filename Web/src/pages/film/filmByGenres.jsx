@@ -1,4 +1,4 @@
-import MoviesRow from '~/components/content/MoviesRow';
+import MoviesRow from '~/components/content/StorysRow';
 import useGetFavoriteFilm from '~/hooks/film/useGetFavoriteFilm.js';
 import Navbar from '~/components/Navbar/Navbar';
 import Footer from '~/components/footer/Footer';

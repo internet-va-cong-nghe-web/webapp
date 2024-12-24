@@ -5,11 +5,11 @@ import { SmoothHorizontalScrolling } from '~/utils';
 import { useViewPort } from '../hook';
 import { Link } from 'react-router-dom';
 
-function MoviesRow(props) {
-    const { movies, title, isNetflix } = props;
+function StorysRow(props) {
+    const { storys, title, isNetflix } = props;
 
     const sliderRef = useRef();
-    const movieRef = useRef();
+    const storyRef = useRef();
     const [dragDown, setDragDown] = useState(0);
     const [dragMove, setDragMove] = useState(0);
     const [isDrag, setIsDrag] = useState(false);
@@ -21,7 +21,7 @@ function MoviesRow(props) {
             SmoothHorizontalScrolling(
                 sliderRef.current,
                 250,
-                movieRef.current.clientWidth * 2,
+                storyRef.current.clientWidth * 2,
                 sliderRef.current.scrollLeft,
             );
         }
@@ -32,7 +32,7 @@ function MoviesRow(props) {
             SmoothHorizontalScrolling(
                 sliderRef.current,
                 250,
-                -movieRef.current.clientWidth * 2,
+                -storyRef.current.clientWidth * 2,
                 sliderRef.current.scrollLeft,
             );
         }
@@ -59,18 +59,18 @@ function MoviesRow(props) {
     };
 
     return (
-        <MovieContainer draggable="false">
+        <StoryContainer draggable="false">
             <h1 className="heading">{title}</h1>
-            <MovieList
+            <StoryList
                 ref={sliderRef}
                 draggable="true"
                 onDragEnd={onDragEnd}
                 onDragStart={onDragStart}
                 onDragEnter={onDragEnter}
                 style={
-                    movies && movies.length > 0
+                    storys && storys.length > 0
                         ? {
-                              gridTemplateColumns: `repeat(${movies.length},
+                              gridTemplateColumns: `repeat(${storys.length},
                         ${
                             windowWidth > 1200
                                 ? '360px'
@@ -85,29 +85,29 @@ function MoviesRow(props) {
                         : {}
                 }
             >
-                {movies &&
-                    movies.map((movie, index) => (
-                        <Link key={index} to={`/film/detail/${movie._id}`}>
-                            <div ref={movieRef} draggable="false" className="movieItem">
-                                <img src={movie.poster_img} alt="" draggable="false" />
-                                <div className="nameMovie">{movie.name}</div>
+                {storys &&
+                    storys.map((story, index) => (
+                        <Link key={index} to={`/novel/detail/${story._id}`}>
+                            <div ref={storyRef} draggable="false" className="storyItem">
+                                <img src={story.poster_img} alt="" draggable="false" />
+                                <div className="nameStory">{story.name}</div>
                             </div>
                         </Link>
                     ))}
-            </MovieList>
+            </StoryList>
             <div className={`btnLeft ${isNetflix && 'isNetflix'}`} onClick={handleScrollLeft}>
                 <FaChevronLeft />
             </div>
             <div className={`btnRight ${isNetflix && 'isNetflix'}`} onClick={handleScrollRight}>
                 <FaChevronRight />
             </div>
-        </MovieContainer>
+        </StoryContainer>
     );
 }
 
-export default MoviesRow;
+export default StorysRow;
 
-const MovieContainer = styled.div`
+const StoryContainer = styled.div`
     background-color: var(--color-background);
     color: var(--color-white);
     padding: 20px 20px 0;
@@ -186,7 +186,7 @@ const MovieContainer = styled.div`
     }
 `;
 
-const MovieList = styled.div`
+const StoryList = styled.div`
     display: grid;
     gap: 6px;
 
@@ -198,10 +198,10 @@ const MovieList = styled.div`
     padding-bottom: 28px;
     scroll-behavior: smooth;
 
-    &:hover .movieItem {
+    &:hover .storyItem {
         opacity: 0.5;
     }
-    .movieItem {
+    .storyItem {
         transform: scale(1);
         max-width: 400px;
         max-height: 400px;
@@ -224,7 +224,7 @@ const MovieList = styled.div`
             height: 100%;
             object-fit: cover;
         }
-        .nameMovie {
+        .nameStory {
             position: absolute;
             left: 0;
             right: 0;

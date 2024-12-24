@@ -16,6 +16,6 @@ router.use("/roles", routerRole);
 router.use("/comment", routerComment);
 router.use("/auth", routerAuth);
 router.use("/user", routerUser);
-router.use("/novel",routerNovel);
+router.use("/novels",routerNovel);
 
 export default router;

@@ -4,14 +4,14 @@ function useCreateEpisode() {
             const formData = new FormData();
             formData.append('info', JSON.stringify(episode));
             formData.append('video', file);
-            const response = await fetch(`/Api/api/episode/${episode.movieId}`, {
+            const response = await fetch(`/Api/api/episode/${episode.novelId}`, {
                 method: 'POST',
                 body: formData,
             });
             const data = await response.json();
             if (response.ok) {
                 window.confirm(data?.message);
-                window.location.href = "/filmsInfor/"
+                window.location.href = "/novelsInfor/"
             }
             window.confirm(data?.message);
         } catch (error) { }

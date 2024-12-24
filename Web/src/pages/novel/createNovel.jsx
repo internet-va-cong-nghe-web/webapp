@@ -12,14 +12,12 @@ function CreateNovelPage() {
         name: '',
         genres: [],
         country: '',
-        actors: [],
-        director: '',
+        author: '',
         status: 'dang cap nhat',
         poster_img: null,
         releaseDate: '',
         description: '',
         totalChap: '',
-        storyDuration: '',
     });
     console.log(novelInfor);
 
