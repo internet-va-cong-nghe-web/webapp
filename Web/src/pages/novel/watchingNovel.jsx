@@ -33,8 +33,13 @@ function WatchNovel() {
                     <div className="row">
                         <div className="col-12">
                             <div className="breadcrumb__links">
+                                <span style={{ fontSize: '20px', paddingTop: '10px', color: '#fff' }}>
+                                    
+                                </span>
                                 <span style={{ fontSize: '33px', paddingTop: '50px', color: '#fff' }}>
-                                    {novel?.name}
+                                    {novel?.country}
+                                    Chúc bạn luôn có năng lượng tích cực và năng động.
+                                    {novel?.descryption}
                                 </span>
                             </div>
                         </div>

@@ -47,6 +47,7 @@ export const getNovel = async (req, res) => {
   }
 };
 
+//fixed
 export const getDetail = async (req, res) => {
   try {
     let novel = await Novel.findOne({ _id: req.params.id });
