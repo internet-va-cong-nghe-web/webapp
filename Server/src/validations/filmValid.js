@@ -6,7 +6,7 @@ const filmSchema = Joi.object({
   //  idVideo: Joi.string().required(),
   country: Joi.string(),
   actors: Joi.array(),
-  director: Joi.string(),
+  author: Joi.string(),
   status: Joi.string(),
   poster_img: Joi.string().required(),
   releaseDate: Joi.date().required(),

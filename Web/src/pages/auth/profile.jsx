@@ -5,7 +5,7 @@ import useUpdateUser from '~/hooks/user/useUpdatebyUser';
 import Footer from '~/components/footer/Footer';
 import Navbar from '~/components/Navbar/Navbar';
 import useDeleteUser from '~/hooks/user/useDeleteUser';
-import ConfirmDialog from '../film/confirmDialog';
+import ConfirmDialog from '../novel/confirmDialog';
 import useLogout from '~/hooks/auth/useLogoutAcount';
 
 function Profile() {

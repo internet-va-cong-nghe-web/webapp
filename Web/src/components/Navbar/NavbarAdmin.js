@@ -29,6 +29,8 @@ function NavbarAdmin(props) {
     return (
         <Navigation
             style={scrollY < 50 ? { backgroundColor: 'transparent' } : { backgroundColor: 'var(--color-background)' }}
+            // style={{ backgroundColor: 'var(--color-background)' }}
+
         >
             <div className="navContainer">
                 <div className="row">

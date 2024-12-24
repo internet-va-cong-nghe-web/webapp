@@ -9,7 +9,7 @@ import { error } from "console";
 export const get = async (req, res) => {
   try {
     const novel = await Novel.find();
-    if (novelm.length === 0) {
+    if (novel.length === 0) {
       return res.status(400).json({
         message: " khong ton tai tieu thuyet nao!",
       });
@@ -21,6 +21,7 @@ export const get = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       message: "loi sever",
+      error: error.message,
     });
   }
 };

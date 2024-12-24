@@ -21,7 +21,7 @@ const FilmSchema = new mongoose.Schema(
     actors: {
       type: Array,
     },
-    director: {
+    author: {
       type: String,
     },
     status: {

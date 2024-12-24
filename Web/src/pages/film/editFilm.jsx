@@ -16,7 +16,7 @@ function EditFilmPage() {
         genres: [],
         country: '',
         actors: [],
-        director: '',
+        author: '',
         status: '',
         poster_img: '',
         releaseDate: '',
@@ -112,13 +112,13 @@ function EditFilmPage() {
                                         setFilmInfor({ ...filmInfor, country: e.target.value });
                                     }}
                                 />
-                                <label>Film director</label>
+                                <label>Film author</label>
                                 <input
-                                    value={filmInfor.director}
+                                    value={filmInfor.author}
                                     type="text"
-                                    name="director"
+                                    name="author"
                                     onChange={(e) => {
-                                        setFilmInfor({ ...filmInfor, director: e.target.value });
+                                        setFilmInfor({ ...filmInfor, author: e.target.value });
                                     }}
                                 />
 

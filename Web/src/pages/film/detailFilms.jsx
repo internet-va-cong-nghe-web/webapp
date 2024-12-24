@@ -201,7 +201,7 @@ function DetailFilm() {
                                                             <span>Status:</span> {film?.status}
                                                         </li>
                                                         <li>
-                                                            <span>Director:</span> {film?.director}
+                                                            <span>Author:</span> {film?.author}
                                                         </li>
                                                     </ul>
                                                 </div>

@@ -195,13 +195,10 @@ function DetailNovel() {
                                                             <span>Country:</span> {novel?.country}
                                                         </li>
                                                         <li>
-                                                            <span>Actors:</span> {novel?.actors}
-                                                        </li>
-                                                        <li>
                                                             <span>Status:</span> {novel?.status}
                                                         </li>
                                                         <li>
-                                                            <span>Director:</span> {novel?.director}
+                                                            <span>Author:</span> {novel?.author}
                                                         </li>
                                                     </ul>
                                                 </div>

@@ -104,7 +104,7 @@ function CreateNovelPage() {
                                     type="text"
                                     name="author"
                                     onChange={(e) => {
-                                        setNovelInfor({ ...novelInfor, director: e.target.value });
+                                        setNovelInfor({ ...novelInfor, author: e.target.value });
                                     }}
                                 />
 

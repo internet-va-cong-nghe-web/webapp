@@ -3,7 +3,7 @@ const EpisodeSchema = new mongoose.Schema(
   {
     movieId: {
       type: Schema.Types.ObjectId,
-      ref: "Film",
+      ref: "Novel",
       required: true,
     },
     name_episode: {

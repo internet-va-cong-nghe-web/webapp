@@ -12,14 +12,12 @@ function CreateFilmPage() {
         name: '',
         genres: [],
         country: '',
-        actors: [],
-        director: '',
+        author: '',
         status: 'dang cap nhat',
         poster_img: null,
         releaseDate: '',
         description: '',
         totalChap: '',
-        movieDuration: '',
     });
     console.log(filmInfor);
 
@@ -99,22 +97,13 @@ function CreateFilmPage() {
                                         setFilmInfor({ ...filmInfor, country: e.target.value });
                                     }}
                                 />
-                                <label>Film actor</label>
+                                <label>Film author</label>
                                 <input
-                                    value={filmInfor.actors}
+                                    value={filmInfor.author}
                                     type="text"
-                                    name="actor"
+                                    name="author"
                                     onChange={(e) => {
-                                        setFilmInfor({ ...filmInfor, actors: [e.target.value] });
-                                    }}
-                                />
-                                <label>Film director</label>
-                                <input
-                                    value={filmInfor.director}
-                                    type="text"
-                                    name="director"
-                                    onChange={(e) => {
-                                        setFilmInfor({ ...filmInfor, director: e.target.value });
+                                        setFilmInfor({ ...filmInfor, author: e.target.value });
                                     }}
                                 />
 

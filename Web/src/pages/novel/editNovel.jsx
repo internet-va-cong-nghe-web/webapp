@@ -15,14 +15,12 @@ function EditNovelPage() {
         name: '',
         genres: [],
         country: '',
-        actors: [],
-        director: '',
+        author: '',
         status: '',
         poster_img: '',
         releaseDate: '',
         description: '',
         totalChap: '',
-        storyDuration: '',
     });
     const statusList = ['hoan thanh', 'dang cap nhat'];
     console.log(novelInfor);
@@ -112,13 +110,13 @@ function EditNovelPage() {
                                         setNovelInfor({ ...novelInfor, country: e.target.value });
                                     }}
                                 />
-                                <label>Novel director</label>
+                                <label>Novel author</label>
                                 <input
-                                    value={novelInfor.director}
+                                    value={novelInfor.author}
                                     type="text"
-                                    name="director"
+                                    name="author"
                                     onChange={(e) => {
-                                        setNovelInfor({ ...novelInfor, director: e.target.value });
+                                        setNovelInfor({ ...novelInfor, author: e.target.value });
                                     }}
                                 />
 

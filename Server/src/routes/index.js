@@ -9,7 +9,7 @@ import routerEpisode from "./routerEpisode.js";
 import routerNovel from "./routerNovel.js";
 const router = express.Router();
 
-router.use("/films", routerFilm);
+// router.use("/films", routerFilm);
 router.use("/episode", routerEpisode);
 router.use("/genres", routerGenre);
 router.use("/roles", routerRole);

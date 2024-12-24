@@ -9,7 +9,7 @@ const CommentSchema = new mongoose.Schema(
     },
     movieId: {
       type: Schema.Types.ObjectId,
-      ref: "Film",
+      ref: "Novel",
       required: true,
     },
     content: {

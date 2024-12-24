@@ -113,7 +113,7 @@ export const remove = async (req, res) => {
   }
 };
 
-export const getGenresOfFilm = async (genresId) => {
+export const getGenresOfNovel = async (genresId) => {
   try {
     const genres = await Genres.find({ _id: { $in: genresId } });
     return genres;
