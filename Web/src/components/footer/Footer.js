@@ -45,7 +45,7 @@ function Footer({ className }) {
                     <h4 className={cs('heading')}>Follow Me</h4>
                     <ul className={cs('list')}>
                         <li className={cs('item')}>
-                            <a href="https://www.facebook.com/ThankTam2208" target="_blank" className={cs('item-link')}>
+                            <a href="https://www.facebook.com/huy042003/" target="_blank" className={cs('item-link')}>
                                 <FontAwesomeIcon className={cs('icon')} icon={faFacebook} />
                                 Facebook
                             </a>
