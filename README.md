@@ -4,11 +4,11 @@
 
 | STT | MSSV     | Tên               | Phân công           |
 |-----|----------|-------------------|---------------------|
-| 1   | 21522196 | Nguyễn Tuấn Khang  |                     |
-| 2   | 22521029 | Trần Thiên Nhật    |                     |
-| 3   | 20520692 | Nguyễn Gia Phú     |                     |
-| 4   | 21522143 | Hứa Hồ Gia Huy     |                     |
-| 5   | 22520326 | Nguyễn Hà Anh Duy  |                     |
+| 1   | 21522196 | Nguyễn Tuấn Khang  |      Front-end               |
+| 2   | 22521029 | Trần Thiên Nhật    |      Front-end               |
+| 3   | 20520692 | Nguyễn Gia Phú     |      Front-end               |
+| 4   | 21522143 | Hứa Hồ Gia Huy     |      Quản lý mã nguồn, xây dựng server backend và xử lý lỗi frontend, phân chia công việc               |
+| 5   | 22520326 | Nguyễn Hà Anh Duy  |      Front-end               |
 
 ## Introduction:
 
